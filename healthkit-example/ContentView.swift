@@ -6,11 +6,22 @@
 //
 
 import SwiftUI
+import HealthKitUI
 
 struct ContentView: View {
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        Button {
+            HealthManager.setup()
+        } label: {
+            Text("Activate HealthKit")
+                .padding(15)
+                .foregroundColor(.white)
+                
+        }
+        .background(Color.blue.cornerRadius(15))
+        .shadow(color: .gray, radius: 10, x: 0, y: 0)
     }
 }
 

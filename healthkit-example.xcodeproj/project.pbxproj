@@ -11,6 +11,8 @@
 		CAB9BC6527E226CB00F99067 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB9BC6427E226CB00F99067 /* ContentView.swift */; };
 		CAB9BC6727E226CE00F99067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB9BC6627E226CE00F99067 /* Assets.xcassets */; };
 		CAB9BC6A27E226CE00F99067 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB9BC6927E226CE00F99067 /* Preview Assets.xcassets */; };
+		CAB9BC7127E2287800F99067 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB9BC7027E2287800F99067 /* HealthManager.swift */; };
+		CAB9BC7527E22A9100F99067 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB9BC7427E22A9100F99067 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		CAB9BC6427E226CB00F99067 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CAB9BC6627E226CE00F99067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAB9BC6927E226CE00F99067 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CAB9BC7027E2287800F99067 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		CAB9BC7227E22A9100F99067 /* healthkit-example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "healthkit-example.entitlements"; sourceTree = "<group>"; };
+		CAB9BC7427E22A9100F99067 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAB9BC7527E22A9100F99067 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +43,7 @@
 			children = (
 				CAB9BC6127E226CB00F99067 /* healthkit-example */,
 				CAB9BC6027E226CB00F99067 /* Products */,
+				CAB9BC7327E22A9100F99067 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,10 +58,12 @@
 		CAB9BC6127E226CB00F99067 /* healthkit-example */ = {
 			isa = PBXGroup;
 			children = (
+				CAB9BC7227E22A9100F99067 /* healthkit-example.entitlements */,
 				CAB9BC6227E226CB00F99067 /* healthkit_exampleApp.swift */,
 				CAB9BC6427E226CB00F99067 /* ContentView.swift */,
 				CAB9BC6627E226CE00F99067 /* Assets.xcassets */,
 				CAB9BC6827E226CE00F99067 /* Preview Content */,
+				CAB9BC7027E2287800F99067 /* HealthManager.swift */,
 			);
 			path = "healthkit-example";
 			sourceTree = "<group>";
@@ -65,6 +74,14 @@
 				CAB9BC6927E226CE00F99067 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CAB9BC7327E22A9100F99067 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAB9BC7427E22A9100F99067 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +156,7 @@
 			files = (
 				CAB9BC6527E226CB00F99067 /* ContentView.swift in Sources */,
 				CAB9BC6327E226CB00F99067 /* healthkit_exampleApp.swift in Sources */,
+				CAB9BC7127E2287800F99067 /* HealthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +284,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "healthkit-example/healthkit-example.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"healthkit-example/Preview Content\"";
@@ -295,6 +314,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "healthkit-example/healthkit-example.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"healthkit-example/Preview Content\"";
